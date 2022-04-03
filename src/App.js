@@ -5,9 +5,10 @@ import { useState } from "react";
 
 const Cell = styled.div`
   width: 100%;
-  height: 80px;
-  background-color: gainsboro;
-  border: 3px solid black;
+  height: 70px;
+  background-color: white;
+  border: 1px solid gray;
+  box-shadow: 1px 1px 3px black;
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -15,7 +16,7 @@ const Cell = styled.div`
   font-size: 3rem;
   cursor: pointer;
   &:hover {
-    background-color: pink;
+    background-color: gray;
   }
 `;
 
@@ -35,6 +36,13 @@ const GameButton = styled.button`
   margin: auto;
   height: 32px;
   margin-top: 16px;
+  border-radius: 7px;
+  border: none;
+  box-shadow: 1px 1px 3px black;
+
+  &:hover {
+    background-color: #6e6e6e;
+  }
 `;
 
 const winState = [
@@ -105,7 +113,7 @@ function App() {
   return (
     <div
       className="App"
-      style={{ backgroundColor: "gray", height: "100vh", padding: "60px" }}
+      style={{ backgroundColor: "white", height: "95vh"}}
     >
       <h1>Tic Tac Tae</h1>
       {winner ? (
